@@ -173,7 +173,7 @@ Future<List<Model>> main() async {
         ..add(TextContent("0027", text0027));
 
       final docGenerated = await docx.generate(content);
-      final fileGenerated = File('result/${cell['출처']}generated.docx');
+      final fileGenerated = File('result/${cell['출처']}_generated.docx');
       if (docGenerated != null) await fileGenerated.writeAsBytes(docGenerated);
     }
     return instances;
